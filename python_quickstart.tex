@@ -1,0 +1,549 @@
+\documentclass[twocolumn]{article}
+\usepackage[a4paper, total={7.5in, 10in}]{geometry}
+
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+\usepackage{pythonhighlight}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{titling}
+\setlength{\droptitle}{-6em}
+
+\title{Python Quick Start}
+\author{Louis Sugy}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\subsection{Variables}\label{variables}
+
+\begin{itemize}
+\tightlist
+\item
+  dynamic typing: \pyth{a = 3}, \pyth{b = "hello"}, \pyth{c = 4.2}
+\item
+  base types: \texttt{int}, \texttt{float}, \texttt{bool} (\pyth{True} / \pyth{False}), \texttt{str}
+\end{itemize}
+
+Operators by descending order of precedence:
+
+\begin{tabular}{|c|p{4cm}|}
+\hline
+\texttt{**} & Exponentation \\
+\texttt{\textasciitilde{}} \texttt{+} \texttt{-} & Complement, sign \\
+\texttt{*} \texttt{/} \texttt{//} \texttt{\%} & Multiplication and division, Euclidean division, modulo \\
+\texttt{+} \texttt{-} & Addition and substraction \\
+\texttt{\textgreater{}\textgreater{}} \texttt{\textless{}\textless{}} & Binary shift \\
+\texttt{\&} & Bitwise \texttt{and} \\
+\texttt{\^{}} \textbar{} & Bitwise \texttt{xor} and \texttt{or} \\
+\texttt{\textless{}=} \texttt{\textgreater{}=} \texttt{\textless{}} \texttt{\textgreater{}} & Comparison \\
+\texttt{==} \texttt{!=} & Equality \\
+\texttt{=} \texttt{\%=} \texttt{/=} \texttt{//=} \texttt{-=} \texttt{+=} \texttt{*=} \texttt{**=} & Assignment \\
+\texttt{is}, \texttt{is\ not} & Identity \\
+\texttt{in}, \texttt{not\ in} & Membership \\
+\texttt{and}, \texttt{or}, \texttt{not} & Logical operators \\ \hline
+\end{tabular}\\
+
+Conversions:
+
+\begin{python}
+>>> a = "3.5"
+>>> b = float(a)
+>>> b
+3.5
+>>> c = int(b)
+>>> c
+3
+\end{python}
+
+\subsection{Input / Output}\label{input-output}
+
+\begin{itemize}
+\tightlist
+\item
+  \pyth{a = input()} stores the next line in the standard input as a
+  string in a variable. It takes an optional string parameter (a text to
+  display before waiting for input)
+\item
+  \pyth{print(a)} displays the representation of the variable on the
+  standard output.
+\end{itemize}
+
+\subsection{Conditions}\label{conditions}
+
+\begin{python}
+if time < 9:
+    print("Let's stay in bed a lil bit")
+elif time == 9:
+    print("Mmmm, time to wake up")
+else:
+    print("Oops I'm late")
+\end{python}
+
+\emph{Note: numbers are considered true if non-zero ; containers and
+strings are considered true if not empty.}
+
+\textbf{Very important note:} Python heavily relies on indentation. You should increase indentation by 4 spaces every time you enter a loop, condition, function, etc, and decrease indentation to mark the end of it.
+
+\subsection{Loops}\label{loops}
+
+These two pieces of code print 3, 5, 7, and 9:
+
+\begin{python}
+for i in range(3, 11, 2):
+    print(i)
+\end{python}
+
+\begin{python}
+i = 3
+while i < 11:
+    print(i)
+    i += 2
+\end{python}
+
+\texttt{range([start,] end [,step{]})} generates integers from
+\texttt{start} (included) to \texttt{end} (excluded) with a step
+\texttt{step}. \texttt{step} can be negative and \texttt{start} greater
+than \texttt{end}. \texttt{start} defaults to 0 and \texttt{step} to 1.
+
+You can exit a loop with the statement \texttt{break}, or skip to the next ieration with \texttt{continue}.
+
+\subsection{Strings}\label{strings}
+
+\begin{itemize}
+\tightlist
+\item
+  defined with \pyth{a = "hello"} or
+  \pyth{a = 'hello'} or
+  \pyth{a = """hello"""} (multiline / docstring)
+\item
+  non-mutable (you can get \pyth{a[3]} but not set it)
+\item
+  \textit{slices}: same as sequences, see in next part (e.g
+  \pyth{"abcdef"[1:5:2]} is \pyth{"bd"})
+\item
+  Python 3 strings are Unicode by default (in Python 2 there was a
+  separate type \texttt{unicode})
+\item
+  the backslash can be used to escape quotes or create special
+  characters like end of line (\texttt{\textbackslash{}n}) horizontal
+  tab (\texttt{\textbackslash{}t}), vertical tab
+  (\texttt{\textbackslash{}v}), etc. To prevent escaping, you can prefix
+  a string with \texttt{r} (raw), e.g
+  \texttt{r"a\textbackslash{}nb"}
+\end{itemize}
+
+\subsubsection{A few useful functions}\label{strusefulfunc}
+
+\begin{tabular}{|p{3.5cm}|p{5cm}|}
+\hline
+\texttt{str.lower()} \texttt{str.upper()} & Returns a lower-case / uper-case copy of \texttt{str} \\
+\texttt{str.strip([chars])} & Removes leading and trailing characters contained in the string \texttt{chars}. If not provided, defaults to whitespaces \\
+\texttt{str.split(sep)} & Cuts the string into pieces according to the given separator and returns a list of these pieces \\
+\texttt{str.join(iterable)} & Joins all the strings from the given sequence into a single string, with the separator \texttt{str} \\
+\texttt{str.find(sub[, start[, end]])} & Returns the first position of the string \texttt{sub} in \texttt{str} between \texttt{start} and \texttt{end}, or $-1$ if not found \\
+\texttt{str.startswith(sub)} \texttt{str.endswith(sub)} & Returns \texttt{True} if \texttt{str} starts / ends with \texttt{sub}, \texttt{False} otherwise.\\ \hline
+\end{tabular}
+
+\subsection{Containers}\label{containers}
+
+The four main container types in Python are two \textbf{sequence} types (lists and tuples), one \textbf{associative} type (dictionaries), and a \textbf{collection} type (sets).
+
+\subsubsection{Lists}\label{lists}
+
+\begin{itemize}
+\item by far the most used container type in Python
+\item dynamic arrays: can be modified, extended, truncated
+\item can contain elements of different types
+\end{itemize}
+
+It is easy to iterate on the elements of a list with a \texttt{for} loop. The following code displays \texttt{3}, \texttt{False}, \texttt{hello} and \texttt{4.2}:
+\begin{python}
+mylist = [3, False, "hello"]
+mylist += [4.2]
+for element in mylist:
+    print(element)
+\end{python}
+
+\paragraph{A few useful functions}\label{listusefulfunc}
+
+\begin{tabular}{|p{3.25cm}|p{5cm}|}
+\hline
+\texttt{+} \texttt{+=} & Concatenate lists \\
+\texttt{len(list)} & Number of elements of a list \\
+\texttt{list.clear()} & Makes the list empty \\
+\texttt{list.append(x)} & Appends \texttt{x} at the end \\
+\texttt{list.insert(i, x)} & Inserts \texttt{x} at position \texttt{i} (*) \\
+\texttt{list.pop(i)} & Removes the element at position \texttt{i} and returns it (*) \\
+\texttt{list.index(x [,start[,end]])} & Returns the position of the first occurence of \texttt{x} or raises an exception \\
+\texttt{list.reverse()} & Reverses the list in place \\
+\texttt{list.copy()} & Returns a copy of the list \\
+\texttt{list.sort()} & See section \textit{about sorting} below \\\hline
+\end{tabular}
+
+(*) Warning: these operations are often slow (\texttt{O(n)}) because many elements need to be shifted.
+
+\paragraph{Slices}\label{slices}
+
+\begin{itemize}
+\item easy way to select a set of indices
+\item apply to strings, lists, tuples, etc
+\end{itemize}
+
+\textit{Before explaining slices: in Python negative indices count from the end, for example $-1$ is the last element of a list, string, etc.}
+
+Syntax: \texttt{[start]:[end][:step]}
+\begin{itemize}
+\item \texttt{start} is inclusive, \texttt{end} exclusive
+\item \texttt{start} is optional and defaults to $0$
+\item \texttt{end} is optional and defaults to $-1$
+\item \texttt{step} is optional and defaults to $1$
+\end{itemize}
+
+\newpage
+
+Here are some examples to see slices in action. Read them carefully and make sure you understand all of them:
+
+\begin{python}
+>>> a = "hello world"
+>>> a[::2]
+'hlowrd'
+>>> a[-1:0:-3]
+'dooe'
+>>> a[:]
+'hello world'
+\end{python}
+
+\begin{python}
+>>> b = [1, 2, 3, 4, 5]
+>>> b[1::2] = [7, 7]
+>>> b
+[1, 7, 3, 7, 5]
+\end{python}
+
+\subsubsection{Tuples}\label{tuples}
+
+\begin{itemize}
+\item tuples hold a fixed number of values
+\item tuples can put together different types
+\item they are \textbf{immutable}: you cannot modify them, only give them a new value
+\item they are really useful combined with unpacking (cf next paragraph)
+\end{itemize}
+
+\begin{python}
+>>> a = (1, 2, 3, "Soleil")
+>>> a[3]
+'Soleil'
+\end{python}
+
+Trying to set \texttt{a[3]} would result in \texttt{TypeError: 'tuple' object does not support item assignment}.
+
+Tuples support for loops and slices like lists.
+
+\subsection{Unpacking}\label{unpacking}
+
+Unpacking is a very powerful feature of Python. It allows you to assign variables from an iterable (e.g a tuple, list, string, etc)) with the following rules:
+
+\begin{itemize}
+\item on the left of the \texttt{=} operator there must be as many variables as the size of the iterable, or at least one variable with a wildcard
+\item a wildcard variable, prefixed with \texttt{*}, becomes a list of as many items as the size of the iterable minus the number of other variables.
+\item this is recursive, meaning that if one of the element of the iterable is itself an iterable, you can also unpack its content (see examples below)
+\end{itemize}
+
+Here are some examples, read them carefully:
+\begin{python}
+>>> a, *b, c = "Hello"
+>>> print(a, b, c)
+H ['e', 'l', 'l'] o
+\end{python}
+
+\begin{python}
+>>> a, (b, *c), *d = 3, "Hello", 4.2, ["World"]
+>>> print(a, b, c, d)
+3 H ['e', 'l', 'l', 'o'] [4.2, ["World"]]
+\end{python}
+
+\begin{python}
+>>> a, ((b, (c, d)), *e) = 1, ((2, (3, 4)), 5, 6)
+>>> print(a, b, c, d, e)
+1 2 3 4 [5, 6]
+\end{python}
+
+
+This feature can have use cases as simple as exchanging the values of two variables in one line without using a third variable:
+\begin{python}
+>>> a = "queen"; b = "dancing"
+>>> a, b = b, a
+>>> print(a, b)
+dancing queen
+\end{python}
+
+\subsubsection{Dictionaries}\label{dictionaries}
+
+\begin{itemize}
+\item key--value associative structures
+\item optimized so that the size of the structure has no impact on the time required to get or set a value for a given key
+\item keys can be any immutable type such as a string, number, tuple, etc (more precisely, hashable types), and values can be anything
+\end{itemize}
+
+Example of basic use:
+\begin{python}
+>>> dic = {"hello": "world", "lorem": "ipsum"}
+>>> dic["hello"]
+'world'
+>>> dic["lorem"] = "hardy"
+>>> dic
+{'hello': 'world', 'lorem': 'hardy'}
+\end{python}
+
+You can easily check if a key is in the dictionary and iterate on keys:
+\begin{python}
+>>> "hello" in dic
+True
+>>> "world" in dic
+False
+>>> for key in dic:
+...     print(key, dic[key])
+... 
+hello world
+lorem hardy
+\end{python}
+
+\paragraph{A few useful functions}\label{dictusefulfunc}
+
+\begin{tabular}{|p{3.25cm}|p{5cm}|}
+\hline
+\texttt{len(dict)} & Number of key--value pairs \\
+\texttt{dict.clear()} & Makes the dictionary empty \\
+\texttt{dict.get(key [,default]} & Returns the value associated to \texttt{key}, if found, otherwise \texttt{default} if provided, or \texttt{None} \\
+\texttt{dict.update(dict2)} & Adds all key--value pairs of \texttt{dict2} in \texttt{dict}, overwriting if necessary \\ 
+\texttt{dict.keys()} & Returns a view (*) of \texttt{dict}'s keys \\
+\texttt{dict.values()} & Returns a view (*) of \texttt{dict}'s values \\ 
+\texttt{dict.items()} & Returns a view (*) of \texttt{dict}'s key--value pairs
+\\ \hline
+\end{tabular}
+
+(*) views are iterable objects that reflect the changes made in the source dictionary
+
+\subsubsection{Sets}\label{sets}
+
+\begin{itemize}
+\item sets are unordered collections of unique items
+\item they are optimized to quickly add an item, check if an item belongs to the collection, remove an item
+\item they can contain elements from multiple types but only immutable types like strings, numbers, tuples, etc (more precisely, hashable types)
+\end{itemize}
+
+Example:
+\begin{python}
+>>> s = set()
+>>> s.add("hello")
+>>> s.update({"lorem", "ipsum"})
+>>> "hello" in s
+True
+>>> "world" in s
+False
+>>> "ipsum" not in s
+False
+\end{python}
+
+\begin{python}
+>>> {1, 2} | {2, 3}
+{1, 2, 3}
+>>> {1, 2} - {2, 3}
+{1}
+>>> {1, 2} & {2, 3}
+{2}
+\end{python}
+
+\paragraph{A few useful functions}\label{setusefulfunc}
+
+\begin{tabular}{|p{3.25cm}|p{5cm}|}
+\hline
+\texttt{len(s)} & Number of elements in the set \\
+\texttt{s.issubset(t)} & Tells wether \texttt{s} is a subset of \texttt{t} \\
+\texttt{s.issuperset(t)} & Tells wether \texttt{s} is a superset of \texttt{t} \\
+\texttt{s.union(t)}, \texttt{s~|~t} & Returns a set of all elements in \texttt{s} or \texttt{t} \\
+\texttt{s.intersection(t)}, \texttt{s~\&~t} & Returns a set of elements that are in both \texttt{s} and \texttt{t} \\
+\texttt{s.difference(t)}, \texttt{s~-~t} & Returns a set of the elements of \texttt{s} which are not in \texttt{t} \\
+\texttt{s.symmetric\_ difference(t)}, \texttt{s~\^{}~t} & Returns a set of the elements that are either in \texttt{s} or \texttt{t} but not both \\
+\texttt{s.copy()} & Returns a copy of \texttt{s} \\ \hline
+\end{tabular}
+
+\subsection{Functions}\label{functions}
+
+\begin{itemize}
+\item functions are defined with the \pyth{def} keyword, a name, arguments and a block of code
+\item arguments can be given default values and then be optional
+\item optional arguments can be defined by position in order from the left, or by their name (see examples below)
+\item the function returns a value, or packs multiple comma-separated return values in a tuple, with the \pyth{return} statement
+\end{itemize}
+
+\newpage
+
+Examples:
+\begin{python}
+>>> def f(a, b=3, c=7):
+...     return a + b + c
+... 
+>>> f(0)
+10
+>>> f(0, 0)
+7
+>>> f(0, 0, 0)
+0
+>>> f(0, c=0)
+3
+\end{python}
+
+\paragraph{Parameters unpacking}\label{paramunpacking}
+
+\begin{itemize}
+\item functions args can be highly flexible with the use of wildcards
+\item \pyth{*args} will be a tuple of all unmatched positional arguments
+\item \pyth{**kwargs} will be a dictionary of all unmatched keyword arguments (see examples below)
+\end{itemize}
+
+\begin{python}
+>>> def f(*args, **kwargs):
+...     print(args)
+...     print(kwargs)
+... 
+>>> f(1, 2, 3, soleil=True, lune=False)
+(1, 2, 3)
+{'soleil': True, 'lune': False}
+\end{python}
+
+\paragraph{Recursive functions}\label{recursivity}
+
+Functions can call themselves. For example, in order to calculate the factorial of an integer $n$ (i.e the product $1 \times 2 \times \cdots \times n$), you could write:
+
+\begin{python}
+def factorial(n):
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+\end{python}
+
+\textit{Note: Python sets a default depth limit of about 1000 calls, so recursive functions are expected to be used on cases where the depth is small, for example proportional to the logarithm of the size of a data structure}
+
+\subsection{About Sorting}\label{aboutsorting}
+
+\begin{itemize}
+\item \pyth{mylist.sort()} will sort the list in ascending order if its elements can be compared
+\item \pyth{sorted(myList)} returns a sorted copy of the list
+\item the parameter \texttt{reverse} allows to choose the order: descending if \pyth{True}, ascending if \pyth{False}. It defaults to \pyth{False}
+\item the parameter \texttt{key} allows to specify a function that takes an element of the list and returns the criteria that the algorithm should use to compare elements to each other (see example below)
+\end{itemize}
+
+\begin{python}
+>>> def last_name(person):
+...     return person["last_name"]
+... 
+>>> persons = [
+...     {"first_name": "Linus",
+...      "last_name": "Torvalds"},
+...     {"first_name": "Guido",
+...      "last_name": "Van Rossum"},
+...     {"first_name": "Richard",
+...      "last_name": "Stallman"}
+... ]
+>>> sorted(persons, key=last_name)
+[{'first_name': 'Richard',
+  'last_name': 'Stallman'},
+ {'first_name': 'Linus',
+  'last_name': 'Torvalds'},
+ {'first_name': 'Guido',
+  'last_name': 'Van Rossum'}]
+>>> sorted(persons, key=last_name, reverse=True)
+[{'first_name': 'Guido',
+ 'last_name': 'Van Rossum'},
+ {'first_name': 'Linus',
+  'last_name': 'Torvalds'},
+ {'first_name': 'Richard',
+  'last_name': 'Stallman'}]
+\end{python}
+
+\subsection{Comprehensions}\label{comprehensions}
+
+\begin{itemize}
+\item another powerful feature of Python
+\item define list or generator expression inline in a natural / mathematical way
+\end{itemize}
+
+Syntax: \texttt{\ldots\ (for \ldots\ in \ldots)* if \ldots}
+
+Examples:
+\begin{python}
+>>> [i**2 for i in range(10) if i % 3 == 1]
+[1, 16, 49]
+\end{python}
+
+\begin{python}
+>>> [j for i in range(5) for j in range(i)]
+[0, 0, 1, 0, 1, 2, 0, 1, 2, 3]
+\end{python}
+
+\begin{python}
+>>> sum(3*i for i in range(42))
+2583
+\end{python}
+
+\subsection{Going Further}\label{further}
+
+\begin{itemize}
+\item Modules: \verb$https://www.tutorialspoint.com/$ \\ \verb$python/python_modules.htm$
+\item Object Oriented Programming: \\ \verb$https://realpython.com/$ \verb$python3-object-oriented-programming/$
+\item Generators: \verb$https://wiki.python.org/moin/$ \\ \verb$Generators$
+\item Regex: \verb$https://docs.python.org/3.7/$ \\ \verb$library/re.html$
+\end{itemize}
+
+Python docs: \verb$https://docs.python.org/3/contents.html$
+
+\end{document}
