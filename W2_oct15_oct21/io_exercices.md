@@ -36,13 +36,13 @@ Simon Says: I love INSAlgo ! ;)
 
 ### Exercice 2 - Multiplication
 
-Write a program that, given two integers A and B, prints back the result of A*B
+Write a program that, given two integers A and B, prints back the result of A\*B
 
 Input :
 * on the first line, a single integer A
 * on the second line, a single integer B
 
-Output : on one line, a single integer, the result of A*B
+Output : on one line, a single integer, the result of A\*B
 
 #### Example
 ##### Input
@@ -64,7 +64,7 @@ Same exercice as before, but now, A and B are on the same line, and separated by
 
 Input : on one line, two space separated integers A and B
 
-Output : on one line, a single integer, the result of A*B
+Output : on one line, a single integer, the result of A\*B
 
 #### Example
 ##### Input
@@ -87,7 +87,7 @@ Input :
 * on the first line, a single integer N, the number of integers to multiply
 * on the second line, N space separated integers I1, I2, ..., IN, the integers to multiply
 
-Output : on one line, a single integer, the product of I1*I2*...*IN
+Output : on one line, a single integer, the product of I1\*I2\*...\*IN
 
 #### Example
 ##### Input
@@ -111,7 +111,7 @@ Input :
 * on the first line, a single integer N, the number of integers to multiply
 * on the N following lines, a single integers Ii, the i-th integer to multiply
 
-Output : on one line, a single integer, the product of I1*I2*...*IN
+Output : on one line, a single integer, the product of I1\*I2\*...\*IN
 
 #### Example
 ##### Input
@@ -170,7 +170,7 @@ Input :
 * on the first line, a single integer N, the number of integers to multiply
 * on the second line, N integers I1, I2, ..., IN, the integers to multiply, separated by ', ' (a comma followed by a space)
 
-Output : on one line, a single integer, the product of I1*I2*...*IN
+Output : on one line, a single integer, the product of I1\*I2\*...\*IN
 
 #### Example
 ##### Input
