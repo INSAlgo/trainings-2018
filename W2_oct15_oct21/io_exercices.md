@@ -15,6 +15,7 @@ Exercices include :
 ### Exercice 1 - "Simon Says"
 
 Write a program that, given a sentence S, prints it back preceded by "Simon Says: "
+
 S is an alphanumeric string, which may also contain spaces and punctuation marks
 
 Input : a single line, containing the sentence S
