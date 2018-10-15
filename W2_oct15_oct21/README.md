@@ -1,8 +1,12 @@
 # Problems of the week
 
 If you managed to submit a correct solution to last week's problems 2 and 3, but got stuck somewhere between problems 4 and 5, we recommend that you join group 1.
+
 However, if you felt uncomfortable with the Python programming language or had trouble with problems 2 and 3, you may consider joining group 2.
+
 About problem 1 : There were several ways to get a correct solution for last week's problem 1 but some of them didn't get accepted by LeetCode in Python, due to performance issues, so don't feel bad if you didn't solve problem 1.
+
+
 In any case, you can look at today's agenda for both groups and choose the one you feel the most interested in :)
 
 ## Group 1 (Intermediate to Advanced Programmer) - Review of Week 1 Problems
