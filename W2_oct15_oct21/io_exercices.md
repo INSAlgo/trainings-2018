@@ -18,6 +18,7 @@ Write a program that, given a sentence S, prints it back preceded by "Simon Says
 S is an alphanumeric string, which may also contain spaces and punctuation marks
 
 Input : a single line, containing the sentence S
+
 Output : a single line, containing the modified sentence
 
 #### Example
@@ -40,6 +41,7 @@ Write a program that, given two integers A and B, prints back the result of A*B
 Input :
 * on the first line, a single integer A
 * on the second line, a single integer B
+
 Output : on one line, a single integer, the result of A*B
 
 #### Example
@@ -61,6 +63,7 @@ Output : on one line, a single integer, the result of A*B
 Same exercice as before, but now, A and B are on the same line, and separated by a space
 
 Input : on one line, two space separated integers A and B
+
 Output : on one line, a single integer, the result of A*B
 
 #### Example
@@ -83,6 +86,7 @@ Same exercice as before, but now you must multiply more than 2 integers
 Input :
 * on the first line, a single integer N, the number of integers to multiply
 * on the second line, N space separated integers I1, I2, ..., IN, the integers to multiply
+
 Output : on one line, a single integer, the product of I1*I2*...*IN
 
 #### Example
@@ -106,6 +110,7 @@ Same exercice, but now the N integers are on separate lines
 Input :
 * on the first line, a single integer N, the number of integers to multiply
 * on the N following lines, a single integers Ii, the i-th integer to multiply
+
 Output : on one line, a single integer, the product of I1*I2*...*IN
 
 #### Example
@@ -137,8 +142,7 @@ Consider this program :
 print(input())
 ```
 
-It shouldn't come as a surprise for you that this program prints directly on the standard output the first line it gets from the standard input
-Write this program in a Python file that you can name custom_cat.py
+It shouldn't come as a surprise for you that this program prints directly on the standard output the first line it gets from the standard input. Write this program in a Python file that you can name custom_cat.py
 
 ### Exercice 1 - Custom cat
 
@@ -165,6 +169,7 @@ Same exercice as before, but now the N integers are on a single line and separat
 Input :
 * on the first line, a single integer N, the number of integers to multiply
 * on the second line, N integers I1, I2, ..., IN, the integers to multiply, separated by ', ' (a comma followed by a space)
+
 Output : on one line, a single integer, the product of I1*I2*...*IN
 
 #### Example
@@ -186,6 +191,7 @@ Output : on one line, a single integer, the product of I1*I2*...*IN
 Write a program that, given one integer I, prints on I+2 lines the following pattern : xxIxxAxx where I is the given integer, and A is an integer such as A = I+2
 
 Input : on one line, a single integer 0 <= I <= 8
+
 Output : on I+2 lines, the pattern ##I##A## such as A = I+2
 
 #### Example
@@ -212,6 +218,7 @@ xx5xx13xx
 Write a program that, given N integers, prints their mean value with a precision of exactly 10^-10
 
 Input : on one line, N space separated integers I1, I2, ..., IN
+
 Output : the mean value, with the given precision
 
 #### Example
@@ -232,6 +239,7 @@ Output : the mean value, with the given precision
 Write a program that, given N integers between 1 and 5, prints an histogram of how many times the numbers from 1 to 5 appeared
 
 Input : on one line, N space separated integers I1, I2, ..., IN such as 1 <= Ii <= 5
+
 Output : on the 5 following lines, as many 'X' characters as the corresponding number appeared in the input
 
 #### Example
