@@ -189,11 +189,11 @@ Output : on one line, a single integer, the product of I1\*I2\*...\*IN
 
 ### Exercice 2 - Pattern
 
-Write a program that, given one integer I, prints on I+2 lines the following pattern : xxIxxAxx where I is the given integer, and A is an integer such as A = I+2
+Write a program that, given one integer I, prints on I+2 lines the following pattern : xxIxxAxx where I is the given integer, and A is an integer such that A = I+2
 
 Input : on one line, a single integer 0 <= I <= 8
 
-Output : on I+2 lines, the pattern xxIxxAxx such as A = I+2
+Output : on I+2 lines, the pattern xxIxxAxx such that A = I+2
 
 #### Example
 ##### Input
@@ -239,7 +239,7 @@ Output : the mean value, with the given precision
 
 Write a program that, given N integers between 1 and 5, prints an histogram of how many times the numbers from 1 to 5 appeared
 
-Input : on one line, N space separated integers I1, I2, ..., IN such as 1 <= Ii <= 5
+Input : on one line, N space separated integers I1, I2, ..., IN such that 1 <= Ii <= 5
 
 Output : on the 5 following lines, as many 'X' characters as the corresponding number appeared in the input
 
