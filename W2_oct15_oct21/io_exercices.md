@@ -192,7 +192,7 @@ Write a program that, given one integer I, prints on I+2 lines the following pat
 
 Input : on one line, a single integer 0 <= I <= 8
 
-Output : on I+2 lines, the pattern ##I##A## such as A = I+2
+Output : on I+2 lines, the pattern xxIxxAxx such as A = I+2
 
 #### Example
 ##### Input
