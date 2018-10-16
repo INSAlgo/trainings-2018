@@ -189,11 +189,11 @@ Output : on one line, a single integer, the product of I1\*I2\*...\*IN
 
 ### Exercice 2 - Pattern
 
-Write a program that, given one integer I, prints on I+2 lines the following pattern : xxIxxAxx where I is the given integer, and A is an integer such that A = I+2
+Write a program that, given one integer I, prints on I+2 lines the following pattern : xxIxxAxx where I is the given integer, and A is the line number (starting from 1)
 
-Input : on one line, a single integer 0 <= I <= 8
+Input : on one line, a single integer I >= 0
 
-Output : on I+2 lines, the pattern xxIxxAxx such that A = I+2
+Output : on I+2 lines, the pattern xxIxxAxx such that A is the line number
 
 #### Example
 ##### Input
@@ -205,13 +205,13 @@ Output : on I+2 lines, the pattern xxIxxAxx such that A = I+2
 ##### Output
 
 ```
+xx5xx1xx
+xx5xx2xx
+xx5xx3xx
+xx5xx4xx
+xx5xx5xx
+xx5xx6xx
 xx5xx7xx
-xx5xx8xx
-xx5xx9xx
-xx5xx10xx
-xx5xx11xx
-xx5xx12xx
-xx5xx13xx
 ```
 
 ### Exercice 3 - Precision
