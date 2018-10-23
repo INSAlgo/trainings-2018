@@ -4,7 +4,7 @@ from collections import defaultdict
 def longest_incr(sequence):
     nb_lenseq = defaultdict(int)
     for nb in sequence:
-        nb_lenseq[nb] = max(nb_lenseq[nb], nb_lenseq[nb - 1] + 1)
+        nb_lenseq[nb] = nb_lenseq[nb - 1] + 1
     nbm = None
     for nb in nb_lenseq:
         if nbm is None or nb_lenseq[nb] > nb_lenseq[nbm]:
