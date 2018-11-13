@@ -17,4 +17,4 @@ https://www.codingame.com/training/easy/brackets-extreme-edition
  
 ## Hard problem (\*\*\*\*\*) :
 
-https://www.codingame.com/training/hard/the-labyrinth
+https://www.codingame.com/training/hard/surface
