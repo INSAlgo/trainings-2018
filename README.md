@@ -9,3 +9,4 @@ Program of the trainings:
  - Week 3 (October 22nd - October 28th): course about complexity and evaluating algorithms. Material: [Slides](W3_oct22_oct28/complexity-slides.pdf)
  - Week 4: (November 5th - November 11th) warmup and Battle Dev (2-hour online programming contest)
  - Week 5: (November 12th - November 18th) stacks and queues. Material: [Slides](W5_nov12_nov18/stacks_and_queues.pdf)
+ - Week 6: (November 19th - November 25th) brute force and bracktracking. Material: [Slides](W6_nov19_nov25/Brute_force_and_backtracking.pdf)
