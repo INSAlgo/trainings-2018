@@ -11,3 +11,5 @@ Program of the trainings:
  - Week 5: (November 12th - November 18th) stacks and queues. Material: [Slides](W5_nov12_nov18/stacks_and_queues.pdf)
  - Week 6: (November 19th - November 25th) brute force and bracktracking. Material: [Slides](W6_nov19_nov25/Brute_force_and_backtracking.pdf)
  - Week 7: (November 26th - December 1st) divide & conquer. Material: [Slides](W7_nov26_dec2/Divide_and_Conquer.pdf)
+ - Week 8: (December 3rd - December 9th) more exercises about divide & conquer.
+ - Week 9: (December 10th - December 16th) greedy algorithms. Material: [Slides](W9_dec10_dec16/Greedy.pdf)
