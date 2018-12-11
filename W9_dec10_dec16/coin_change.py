@@ -1,5 +1,5 @@
 n = int(input())
-bills = [20, 10, 5, 1]
+bills = [20, 10, 5, 2, 1]
 nbill = []
 
 for bill in bills:
