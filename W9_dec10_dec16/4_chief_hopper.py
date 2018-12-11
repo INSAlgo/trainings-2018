@@ -2,21 +2,10 @@
 
 
 def chiefHopper(arr):
-    sumh = 0
-    minE = 0
-    p2 = 1
-    for val in arr:
-        sumh = 2 * sumh + val
-        p2 *= 2
-
-        # this is ugly but ceil() has numerical instability
-        neededE = sumh // p2
-        if sumh % p2:
-            neededE += 1
-
-        if neededE > minE:
-            minE = neededE
-    return minE
+    x = 0
+    for val in arr[::-1]:
+        x = (x + val + 1) // 2
+    return x
 
 
 if __name__ == '__main__':
