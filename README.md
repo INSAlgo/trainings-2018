@@ -13,3 +13,4 @@ Program of the trainings:
  - Week 7: (November 26th - December 1st) divide & conquer. Material: [Slides](W7_nov26_dec2/Divide_and_Conquer.pdf)
  - Week 8: (December 3rd - December 9th) more exercises about divide & conquer.
  - Week 9: (December 10th - December 16th) greedy algorithms. Material: [Slides](W9_dec10_dec16/Greedy.pdf)
+ - Week 10: (December 17th - December 23rd) common data structures: under the hood, complexity, when to use them. Material: [Slides](W10_dec17_dec23/DataStructures.pdf)
