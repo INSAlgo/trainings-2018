@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+
+##############################################################################
+#                        Louis Sugy 2019, MIT license                        #
+#                                for INSAlgo                                 #
+##############################################################################
+
+
 class BinarySearchTree:
     """Binary search tree implementation for multisets
     """
@@ -116,6 +124,3 @@ class BinarySearchTree:
             repr_self.append(repr_left[i] + " " * ll + repr_right[i])
 
         return repr_self
-
-
-bst = BinarySearchTree.from_list([8, 3, 10, 1, 6, 4, 7, 14, 13])
