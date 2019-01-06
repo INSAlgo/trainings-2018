@@ -1,8 +1,9 @@
-# INSAlgo weekly trainings - 2018
+INSAlgo weekly trainings - 2018
+===
 
 This repo contains the courses, exercises and solutions of the weekly trainings of our competitive programming student club.
 
-Program of the trainings:
+## Program of the trainings
 
  - Week 1 (October 8th - October 14th): exercises to introduce the students to Python and to the kind of problems they can meet in competitions. Material: [Python Quick Start Guide](python_quickstart.pdf)
  - Week 2 (October 15th - October 21st): I/O course for beginners, harder problems for the others.
@@ -14,3 +15,7 @@ Program of the trainings:
  - Week 8: (December 3rd - December 9th) more exercises about divide & conquer.
  - Week 9: (December 10th - December 16th) greedy algorithms. Material: [Slides](W09_dec10_dec16/Greedy.pdf)
  - Week 10: (December 17th - December 23rd) common data structures: under the hood, complexity, when to use them. Material: [Slides](W10_dec17_dec23/DataStructures.pdf)
+
+## License
+
+The code is made available under MIT license (you must credit INSAlgo). You can also use the pdf slides with attribution.
