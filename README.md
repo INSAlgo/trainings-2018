@@ -16,6 +16,7 @@ This repo contains the courses, exercises and solutions of the weekly trainings 
  - Week 9: (December 10th - December 16th) greedy algorithms. Material: [Slides](W09_dec10_dec16/Greedy.pdf)
  - Week 10: (December 17th - December 23rd) common data structures: under the hood, complexity, when to use them. Material: [Slides](W10_dec17_dec23/DataStructures.pdf)
  - Week 11: (January 7th - January 13th) trees. Material: [Slides](W11_jan7_jan_13/trees.pdf)
+ - Week 12: (January 14th - January 20th) you can keep on working on exercises from the last weeks
 
 ## License
 
