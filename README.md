@@ -17,7 +17,8 @@ This repo contains the courses, exercises and solutions of the weekly trainings 
  - Week 10: (December 17th - December 23rd) common data structures: under the hood, complexity, when to use them. Material: [Slides](W10_dec17_dec23/DataStructures.pdf)
  - Week 11: (January 7th - January 13th) trees. Material: [Slides](W11_jan7_jan_13/trees.pdf)
  - Week 12: (January 14th - January 20th) you can keep on working on exercises from the last weeks
- - Week 13: (January 21st - January 27th) graph theory 1: intro. Material: [Slides](W13_jan21_jan27/graphs1.pdf)
+ - Week 13: (January 21st - January 27th) Graph Theory 1: intro. Material: [Slides](W13_jan21_jan27/graphs1.pdf)
+ - Week 14: (February 4th - February 10th) Graph theory 2: Minimum Spanning Tree. Material: [Slides](W14_feb4_feb10/graphs2_mst.pdf)
 
 ## License
 
