@@ -48,8 +48,8 @@ def main():
     edges = [(lambda s: (int(s[0]), int(s[1]), int(s[2])))(input().split())
              for _ in range(m)]
     tree, cost = kruskal(edges)
-    print(cost)
     print("\n".join("%d %d" % edge for edge in tree))
+    print("---\n%d" % cost)
 
 
 if __name__ == "__main__":
