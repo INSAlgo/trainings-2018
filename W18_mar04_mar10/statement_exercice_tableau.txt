@@ -1,0 +1,16 @@
+C'est l'apocalypse, mais par chance on a une arche ! Tout le monde veut y monter, mais personne ne veut abandonner ses amis ! Il est impossible de faire embarquer une personne sans aussi faire embarquer tous ses amis. Mais l'arche risque de ne pas être assez resistante : celle ci cassera si le poids cumulé des personnes qui sont dessus est strictement supérieur à sa résistance, P.
+
+Chacune des N personne a un poids Pi, et peut avoir plusieurs amis. Les relations d'amitié sont réciproques et transitives.
+Il y a en tout M relations d'amitié. Combien de personnes au maximum peut-on sauver dans l'arche?
+Input : 
+1e ligne : N, le nombre de personnes
+2e ligne : P, le poids total que peut supporter l'arche
+3e ligne : N entiers séparés par des espaces, les Pi
+4e ligne : M, le nombre de relations amies
+M lignes suivantes : I et J, les numéros de deux personnes dans une relation amie.
+
+Bounds : 
+1 <=N<= 10 000
+0 <=M<=20 000
+1 <=P<= 50 000
+1 <=Pi<= 10 000
