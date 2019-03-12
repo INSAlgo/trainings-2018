@@ -1,7 +1,9 @@
+Problems of the week
+===
+
 Today you have a choice : continue on what we were doing last week, or move on to these exercises.
 Feel free to ask for help whatever you choose !
 
-===
 
 ## 1 : Divisible sum pairs
 https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
