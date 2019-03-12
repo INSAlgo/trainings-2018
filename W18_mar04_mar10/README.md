@@ -1,6 +1,8 @@
+Problems of the week
+===
+
 Together, let's save the human kind ! 
 Today we focus on a relatively hard problem and try to solve it together. The statement (FR) is in this repository, but try not to look at it for now, this way we'll all discover it at the same time ! 
-===
 
 ## SPOILER DO NOT LOOK AT THAT
 

@@ -20,7 +20,9 @@ This repo contains the courses, exercises and solutions of the weekly trainings 
  - Week 13: (January 21st - January 27th) Graph Theory 1: intro. Material: [Slides](W13_jan21_jan27/graphs1.pdf)
  - Week 14: (February 4th - February 10th) Graph Theory 2: Minimum Spanning Tree. Material: [Slides](W14_feb4_feb10/graphs2_mst.pdf)
  - Week 15: (February 11th - February 17th) Graph Theory 3: Shortest Path. Material: [Slides](W15_feb11_feb17/graphs3_shortest-path.pdf)
-
+ - Week 17: (February 25th - March 3rd): Warm up for the coding contest
+ - Week 18: (March 4th - March 10th): Hard problem, split in a few steps
+ - Week 19: (March 11th - March 17th): Exercises and follow up on the precedent week's problem
 ## License
 
 The code is made available under MIT license (you must credit INSAlgo). You can also use the pdf slides with attribution.
