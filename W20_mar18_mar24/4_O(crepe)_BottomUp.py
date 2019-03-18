@@ -1,13 +1,13 @@
-def ocrepe(n, k, etapes):
+def ocrepe(n, k, steps):
     dp = [[False for _ in range(k)] for _ in range(n)]
 
-    for i in range(len(etapes[0]["ingredients"])):
-        if etapes[0]["ingredients"][i] < k:
-            dp[0][etapes[0]["ingredients"][i]] = True
+    for i in range(len(steps[0]["ingredients"])):
+        if steps[0]["ingredients"][i] < k:
+            dp[0][steps[0]["ingredients"][i]] = True
 
     for i in range(1, n):
         for j in range(k):
-            for ingr in etapes[i]["ingredients"]:
+            for ingr in steps[i]["ingredients"]:
                 if dp[i - 1][j] and ingr + j < k:
                     dp[i][ingr + j] = True
 
@@ -19,10 +19,10 @@ def ocrepe(n, k, etapes):
 
 
 n, k = map(int, input().split())
-etapes = [None] * n
+steps = [None] * n
 for i in range(0, n):
     m = int(input())
     ingr = list(map(int, input().split()))
-    etape_i = {"m": m, "ingredients": ingr}
-    etapes[i] = etape_i
-ocrepe(n, k, etapes)
+    step_i = {"m": m, "ingredients": ingr}
+    steps[i] = step_i
+ocrepe(n, k, steps)

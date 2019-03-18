@@ -14,5 +14,5 @@ def topdown(n):
 
 
 memo = dict()
-for testCase in range(int(input())):
+for test_case in range(int(input())):
     print(topdown(int(input())))

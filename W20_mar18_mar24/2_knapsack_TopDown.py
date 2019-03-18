@@ -15,7 +15,7 @@ def knapsack(c, objects):
     return result
 
 
-for testCase in range(int(input())):
+for test_case in range(int(input())):
     n, c = map(int, input().split())
     objects = list(map(int, input().split()))
     memo = [-1] * (c + 1)

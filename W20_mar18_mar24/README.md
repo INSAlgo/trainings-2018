@@ -1,7 +1,7 @@
 Problems of the week
 ===
 
-This week we explore a new paradigm for solving optimization problem : Dynamic Programming !
+This week we explore a new paradigm for solving optimization problems : Dynamic Programming !
 
 
 ## 1 : Count number of hops

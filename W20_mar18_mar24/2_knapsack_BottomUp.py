@@ -1,4 +1,4 @@
-for testCase in range(int(input())):
+for test_case in range(int(input())):
     n, c = map(int, input().split())
     objects = list(map(int, input().split()))
     dp = [0] * (c + 1)
