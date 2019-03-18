@@ -23,6 +23,7 @@ This repo contains the courses, exercises and solutions of the weekly trainings 
  - Week 17: (February 25th - March 3rd): Warm up for the coding contest
  - Week 18: (March 4th - March 10th): Hard problem, split in a few steps
  - Week 19: (March 11th - March 17th): Exercises and follow up on the precedent week's problem
+ - Week 20: (March 18th - March 24th): Dynamic programming. Material : [Slides](W20_mar18_mar24/Dynamic_programming.pdf)
 ## License
 
 The code is made available under MIT license (you must credit INSAlgo). You can also use the pdf slides with attribution.
