@@ -1,5 +1,5 @@
 cases = []
-for testCase in range(int(input())):
+for test_case in range(int(input())):
     cases.append(int(input()))
 
 dp = [0] * (max(cases) + 1)  # to count from 1 and not 0
