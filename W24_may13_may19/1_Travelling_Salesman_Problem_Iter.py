@@ -4,28 +4,28 @@ from collections import defaultdict
 
 
 def extract_bit(bitmap, rank):
-    return (bitmap//pow(2, rank)) % 2
+    return (bitmap >> rank) % 2
 
 
 def put_bit(bitmap, rank, value):
     if value == 1:
-        return bitmap | pow(2, rank)
+        return bitmap | (1 << rank)
     else:
-        return bitmap & ~pow(2, rank)
+        return bitmap & ~(1 << rank)
 
 
 def Held_Karp(graph, nodeStart):
     # for a static structure :
-    mem = [[float('inf') for j in range(pow(2, len(graph) + 1))]
+    mem = [[float('inf') for j in range(1 << len(graph) + 1)]
            for i in range(len(graph))]
-    #mem = defaultdict(lambda: defaultdict(lambda: float('inf')))
-    mem[nodeStart][pow(2, nodeStart)] = 0
-    for bitmap in range(pow(2, len(graph) + 1)):
-        # if the path doesn't include the first node
-        if extract_bit(bitmap, 0) != 0:
+    # mem = defaultdict(lambda: defaultdict(lambda: float('inf')))
+    mem[nodeStart][1 << nodeStart] = 0
+    for bitmap in range((1 << len(graph)) + 1):
+        # if the path includes the first node
+        if extract_bit(bitmap, 0):
             for node in range(len(graph)):
-                # if the path doesn't include the current node
-                if extract_bit(bitmap, node) != 0:
+                # if the path includes the current node
+                if extract_bit(bitmap, node):
                     for neighbor in graph[node]:
                         # if the path include that neighbor
                         if extract_bit(bitmap, neighbor):
@@ -37,11 +37,11 @@ def Held_Karp(graph, nodeStart):
     # find the best option with the return
 
     for node in range(len(graph)):
-        if mem[node][pow(2, len(graph))-1] != float('inf'):
+        if mem[node][(1 << len(graph))-1] != float('inf'):
             # if we can return to the starting point
             if nodeStart in graph[node]:
                 candidate = mem[node][pow(
-                    2, len(graph))-1] + graph[node][nodeStart]
+                    2, len(graph)) - 1] + graph[node][nodeStart]
                 bestDistance = min(bestDistance, candidate)
     return bestDistance
 
@@ -58,6 +58,6 @@ for inputNumber in range(int(input())):
     for i in range(len(nodes)):
         for j in range(i+1, len(nodes)):
             graph[i][j] = abs(nodes[i][0]-nodes[j][0]) + \
-                abs(nodes[i][1]-nodes[j][1])
+                abs(nodes[i][1] - nodes[j][1])
             graph[j][i] = graph[i][j]
     print("The shortest path has length", Held_Karp(graph, 0))
