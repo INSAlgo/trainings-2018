@@ -4,28 +4,28 @@ from collections import defaultdict
 
 
 def extract_bit(bitmap, rank):
-    return (bitmap//pow(2, rank)) % 2
+    return (bitmap >> rank) % 2
 
 
 def put_bit(bitmap, rank, value):
     if value == 1:
-        return bitmap | pow(2, rank)
+        return bitmap | (1 << rank)
     else:
-        return bitmap & ~pow(2, rank)
+        return bitmap & ~(1 << rank)
 
 
 def Held_Karp(graph, nodeStart):
     # for a static structure :
-    # mem = [[float('inf') for j in range(pow(2, len(graph)+1))]
+    # mem = [[float('inf') for j in range(1<< len(graph)+1))]
     #       for i in range(len(graph))]
     mem = defaultdict(lambda: defaultdict(lambda: float('inf')))
-    mem[nodeStart][pow(2, nodeStart)] = 0
+    mem[nodeStart][1 << nodeStart] = 0
     file = deque()
-    file.append((nodeStart, pow(2, nodeStart)))
+    file.append((nodeStart, 1 << nodeStart))
     while(file):
         # print(file)
         nodeCurrent, setCurrent = file.popleft()
-        # generate all neighbours of the current node :
+        # generate all neighbors of the current node :
         for neighbor in graph[nodeCurrent]:
             # discard neighbors already seen
             if not extract_bit(setCurrent, neighbor):
@@ -43,7 +43,7 @@ def Held_Karp(graph, nodeStart):
     # find the best option with the return
 
     for node in range(len(graph)):
-        if mem[node][pow(2, len(graph))-1] != float('inf'):
+        if mem[node][(1 << len(graph))-1] != float('inf'):
             # if we can return to the starting point
             if nodeStart in graph[node]:
                 candidate = mem[node][pow(
