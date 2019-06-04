@@ -24,6 +24,12 @@ This repo contains the courses, exercises and solutions of the weekly trainings 
  - Week 18: (March 4th - March 10th): Hard problem, split in a few steps
  - Week 19: (March 11th - March 17th): Exercises and follow up on the precedent week's problem
  - Week 20: (March 18th - March 24th): Dynamic programming. Material : [Slides](W20_mar18_mar24/Dynamic_programming.pdf)
+ - Week 21: (April 1st - April 7th) : Follow up on dynamic programming
+ - Week 22: (April 29th - May 4th) : Introduction to machine learning
+ - Week 23: (May 05th - May 12th) : Tries data structure. Material : [Slides](W23_may05_may12/Tries.pdf)
+ - Week 24: (May 13th - May 19th) : Travelling Salesman Problem : [Slides](W24_may13_may19/Travelling_salesman_problem.pdf)
+ - Week 25: (May 20th - May 26th) : Practice week
+ - Week 26: (May 27th - June 2nd) : Virtual contest for last session of the year
 ## License
 
 The code is made available under MIT license (you must credit INSAlgo). You can also use the pdf slides with attribution.
